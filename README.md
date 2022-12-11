@@ -1,1 +1,1 @@
-# https://l0gout.github.io/slider-studio/
+# Посмотреть сайт здесь https://l0gout.github.io/slider-studio/
