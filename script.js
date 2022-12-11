@@ -32,7 +32,8 @@ arrowLeft.addEventListener("click", () => {
           descriptionTitle[1].innerHTML = projectDescriptionList[2][1];
           descriptionTitle[2].innerHTML = projectDescriptionList[2][2];
           descriptionTitle[3].innerHTML = projectDescriptionList[2][3];
-          picture.src = "http://127.0.0.1:5500/image/image_3.jpg";
+          picture.src =
+            picture.src.substring(0, picture.src.length - 5) + "3.jpg";
           break;
         case "item-2":
           item.classList.remove("active");
@@ -43,7 +44,8 @@ arrowLeft.addEventListener("click", () => {
           descriptionTitle[1].innerHTML = projectDescriptionList[0][1];
           descriptionTitle[2].innerHTML = projectDescriptionList[0][2];
           descriptionTitle[3].innerHTML = projectDescriptionList[0][3];
-          picture.src = "http://127.0.0.1:5500/image/image_1.jpg";
+          picture.src =
+            picture.src.substring(0, picture.src.length - 5) + "1.jpg";
           break;
         case "item-3":
           item.classList.remove("active");
@@ -54,7 +56,8 @@ arrowLeft.addEventListener("click", () => {
           descriptionTitle[1].innerHTML = projectDescriptionList[1][1];
           descriptionTitle[2].innerHTML = projectDescriptionList[1][2];
           descriptionTitle[3].innerHTML = projectDescriptionList[1][3];
-          picture.src = "http://127.0.0.1:5500/image/image_2.jpg";
+          picture.src =
+            picture.src.substring(0, picture.src.length - 5) + "2.jpg";
           break;
         default:
           console.log("Если вы это видите значит что-то сломалось...");
@@ -77,7 +80,8 @@ arrowRight.addEventListener("click", () => {
           descriptionTitle[1].innerHTML = projectDescriptionList[1][1];
           descriptionTitle[2].innerHTML = projectDescriptionList[1][2];
           descriptionTitle[3].innerHTML = projectDescriptionList[1][3];
-          picture.src = "http://127.0.0.1:5500/image/image_2.jpg";
+          picture.src =
+            picture.src.substring(0, picture.src.length - 5) + "2.jpg";
           break;
         case "item-2":
           item.classList.remove("active");
@@ -88,7 +92,8 @@ arrowRight.addEventListener("click", () => {
           descriptionTitle[1].innerHTML = projectDescriptionList[2][1];
           descriptionTitle[2].innerHTML = projectDescriptionList[2][2];
           descriptionTitle[3].innerHTML = projectDescriptionList[2][3];
-          picture.src = "http://127.0.0.1:5500/image/image_3.jpg";
+          picture.src =
+            picture.src.substring(0, picture.src.length - 5) + "3.jpg";
           break;
         case "item-3":
           item.classList.remove("active");
@@ -99,7 +104,8 @@ arrowRight.addEventListener("click", () => {
           descriptionTitle[1].innerHTML = projectDescriptionList[0][1];
           descriptionTitle[2].innerHTML = projectDescriptionList[0][2];
           descriptionTitle[3].innerHTML = projectDescriptionList[0][3];
-          picture.src = "http://127.0.0.1:5500/image/image_1.jpg";
+          picture.src =
+            picture.src.substring(0, picture.src.length - 5) + "1.jpg";
           break;
         default:
           console.log("Если вы это видите значит что-то сломалось...");
@@ -131,7 +137,10 @@ function toggleActiveArrow(i) {
     projectDescriptionList[i.target.classList[1][5] - 1][2];
   descriptionTitle[3].innerHTML =
     projectDescriptionList[i.target.classList[1][5] - 1][3];
-  picture.src = `http://127.0.0.1:5500/image/image_${i.target.classList[1][5]}.jpg`;
+  picture.src =
+    picture.src.substring(0, picture.src.length - 5) +
+    i.target.classList[1][5] +
+    ".jpg";
 }
 
 function toggleActiveTitle(i) {
@@ -157,5 +166,8 @@ function toggleActiveTitle(i) {
     projectDescriptionList[i.target.classList[1][5] - 1][2];
   descriptionTitle[3].innerHTML =
     projectDescriptionList[i.target.classList[1][5] - 1][3];
-  picture.src = `http://127.0.0.1:5500/image/image_${i.target.classList[1][5]}.jpg`;
+  picture.src =
+    picture.src.substring(0, picture.src.length - 5) +
+    i.target.classList[1][5] +
+    ".jpg";
 }
